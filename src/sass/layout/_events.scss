@@ -1,0 +1,85 @@
+.events {
+  // margin-left: 20px;
+  // margin-right: 20px;
+  padding-bottom: 60px;
+  padding-top: 17px;
+
+}
+
+.events__wrapp {
+  display: grid;
+}
+
+.events__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+
+  padding-bottom: 60px;
+
+  @include mq(tablet) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.events__item {
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.events__card {
+  max-width: 225px;
+  margin-bottom: 32px;
+
+  @include mq(tablet) {
+    max-width: 152px;
+  }
+
+  margin-bottom: 32px;
+
+  @include mq(desktop) {
+    max-width: 288px;
+  }
+}
+
+.events__img {
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-bottom: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 152px;
+  object-fit: cover;
+
+  @include mq(tablet) {
+    width: 152px;
+  }
+
+  margin-bottom: 32px;
+
+  @include mq(desktop) {
+    width: 267px;
+    height: 220px;
+
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+}
+
+.events__name {
+  margin-bottom: 4px;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+}
+
+.events__date {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.events__nameOfThePlace {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

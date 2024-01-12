@@ -1,0 +1,110 @@
+img {
+  display: block;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  background-color: $background-color;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 18px;
+  color: $title-color;
+  text-align: center;
+  text-transform: uppercase;
+  width: 220px;
+  margin-top: 80px;
+
+
+  @include mq(tablet) {
+    margin-top: 40px;
+    width: 440px;
+
+    font-size: 36px;
+  }
+
+  @include mq(desktop) {
+    margin-top: 40px;
+    width: 600px;
+
+    font-size: 50px;
+  }
+}
+
+h2 {
+  color: $title-color;
+}
+
+input {
+  letter-spacing: .03em;
+}
+
+// h2 {
+//   font-weight: 700;
+//   font-size: 14px;
+//   text-align: center;
+//   letter-spacing: 0.03em;
+// }
+
+.modal {
+  & h2 {
+    font-size: 20px;
+    font-weight: 600;
+
+    @include mq(tablet) {
+      font-size: 20px;
+    }
+
+    @include mq(desktop) {
+      font-size: 24px;
+    }
+  }
+
+  & p {
+    font-size: 16px;
+    font-weight: 400;
+
+    @include mq(tablet) {
+      font-size: 16px;
+    }
+
+    @include mq(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  & button {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+
+}

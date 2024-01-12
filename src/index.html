@@ -1,14 +1,80 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page title</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.min.css" />
+</head>
+<div></div>
+
+<body>
+  <div class="backdrop is-hidden">
+    <div class="modal"></div>
+  </div>
+
+  <header>
+    <div class="header container">
+      <a class="logo-link" href="#">
+        <div class="logo-square">
+          <svg class="logo" width="180px" height="107px">
+            <use href="./images/event_booster.svg#icon-logo"></use>
+          </svg>
+        </div>
+      </a>
+
+      <h1>Find best events around the world</h1>
+      <div class="header__wrapp">
+        <div class="header__inputWrapp">
+          <form class="header__form" action="">
+            <input class="header__input" type="Start searching" name="serchQuery" placeholder="Start searching">
+            <button type="submit" class="headerInput__button">
+              <svg class="headerInput__icon" width="15" height="20">
+                <use href="./images/event_booster.svg#icon-magnifying"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="countries">
+          <svg class="select-icon" width="15px" height="10px">
+            <use href="./images/event_booster.svg#icon-select"></use>
+          </svg>
+          <div class="countries__wrapp">Choose country
+          </div>
+          <ul class="countries__list is-hidden">
+            <li class="option list">
+              <input type="radio" class="radio" name="category" id="undefined">
+              <label for="undefined">Choose country</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="events">
+      <div class="container events__wrapp">
+        <ul class="events__list"></ul>
+      </div>
+      <div class="container">
+        <div class="events__pages"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer container">
+      <p class="footer__text">© 2023 | All Rights Reserved |
+        Developed with ❤ by GoIT Students</p>
+    </div>
+  </footer>
+  <script src="js/index.js" type="module"></script>
+</body>
+
 </html>
